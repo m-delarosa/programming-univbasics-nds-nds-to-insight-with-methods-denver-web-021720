@@ -29,6 +29,7 @@ def directors_totals(nds)
   while director_index < nds.count do
     director_name = nds[director_index][:name]
     result[director_name] = nil
+    #I am assigning the key to the directors name in the result hash here.
 
 
   result
