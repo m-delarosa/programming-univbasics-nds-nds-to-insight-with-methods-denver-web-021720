@@ -22,26 +22,29 @@ end
 # The return value should be like:
 #
 # { directorOne => allTheMoneyTheyMade, ... }
+
 def directors_totals(nds)
   result = {}
   director_index = 0
 
   while director_index < nds.count do
     director_name = nds[director_index][:name]
-    result[director_name] = nil
-    #I am assigning the key to the directors name in the result hash here.
-
-
+    result[director_name] = gross_for_director(nds[director_index])
+    #I am assigning the key to the directors name in the result hash here and
+    #equating the value to the result of my gross_for_director method for a
+    #a given director.
+    director_index =+ 1
+  end
   result
 end
 
-grand_total = 0
-row_index = 0
-while row_index < vm.length do
-  column_index = 0
-  while column_index < vm[row_index].length do
-    grand_total += total_value_of_spinner(vm, row_index, column_index)
-    column_index += 1
-  end
-  row_index += 1
-end
+# grand_total = 0
+# row_index = 0
+# while row_index < vm.length do
+#   column_index = 0
+#   while column_index < vm[row_index].length do
+#     grand_total += total_value_of_spinner(vm, row_index, column_index)
+#     column_index += 1
+#   end
+#   row_index += 1
+# end
