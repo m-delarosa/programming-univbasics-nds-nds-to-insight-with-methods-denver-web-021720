@@ -33,7 +33,7 @@ def directors_totals(nds)
     #I am assigning the key to the directors name in the result hash here and
     #equating the value to the result of my gross_for_director method for a
     #a given director.
-    director_index =+ 1
+    director_index += 1
   end
   result
 end
